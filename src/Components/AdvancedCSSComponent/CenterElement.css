@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: cadetblue;
+    display: grid;
+    place-items: center;
+}
+.main-div{
+    width: 50vw;
+    height: 70vh;
+    border: 2px solid #fff;
+    color: #fff;
+
+    /* First two ways */
+    /* position: relative; */
+
+
+    /* Third Way */
+    /* display: table; */
+
+    /* Flex Way */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+
+     /* Grids Way */
+     display: grid;
+     place-items: center;
+
+}
+.main-div h1{
+
+}
+
+ /* Third Way */
+/* .main-div h1{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}  */
+
+
+/* Second Way */
+/* .main-div h1{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translatey(-50%);
+} */
+
+/*First Way */
+/* .main-div h1{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translatey(-50%);
+} */
