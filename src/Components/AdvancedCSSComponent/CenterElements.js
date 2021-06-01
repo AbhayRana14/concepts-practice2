@@ -1,4 +1,5 @@
 import React from 'react'
+import UseStateHook from '../HooksComponent/useStateHook'
 import PieChart from '../PieChartComponent/PieChart'
 import './CenterElement.css'
 
@@ -10,6 +11,9 @@ const CenterElements = () => {
           </div>
           <div>
             <PieChart/>
+          </div>
+          <div>
+            <UseStateHook/>
           </div>
         </div>
     )
