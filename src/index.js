@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CenterElements from './AdvancedCSS/CenterElements';
+import CenterElements from './Components/AdvancedCSSComponent/CenterElements';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <CenterElements/>
-  </React.StrictMode>,
+    <CenterElements/>,
   document.getElementById('root')
 );
