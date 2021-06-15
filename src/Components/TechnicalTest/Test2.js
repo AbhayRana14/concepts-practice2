@@ -1,52 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { findDOMNode } from 'react-dom'
+import './Test2.css'
 
 const Test2 = () => {
-
-    function i_am_promise(i_am_boolean){
-        return new Promise(function(resolve,reject){
-         if(i_am_boolean === 1){
-            setTimeout(resolve,3000); 
-         }
-         else{
-             reject("rejected");
-         } 
-        }).then(function(){
-            if({username : "abhay"} === {username :"abhay"})
-            {
-                console.log("true");
-            }
-            else{
-                console.log("false");
-            }
-            console.log("done");
-        }).catch(function(){
-            console.log("rejected");
-        })
+    const [val1,setVal1] = useState(0);
+    const [val2,setVal2] = useState(0);
+    const getVal1 = (value) =>{
+      setVal1(value);
     }
-    // function i_am_promise(i_am_boolean){
-    //     const PObj1 = new Promise((resolve,reject)=>{
-    //         setTimeout(function (){
-    //             if (i_am_boolean){
-    //                 let Res = "It is resolved";
-    //                 resolve(Res);
-    //             }
-    //             else{
-    //                 let err = "It is not resolved"
-    //                 reject(err);
-    //             } 
-    //         },3000);
-    //     });
-    //     PObj1.then((Res)=>{
-    //         console.log(Res);
-    //     }).catch((err)=>{
-    //         console.log(err);
-    //     })
-        
-    // }
-    
+    const getVal2 = (value) =>{
+        setVal2(value);
+    }
+    const findAdd = (val1,val2) => {
+         console.log(   Number(val1)+Number(val2));
+        //console.log(val1+val2);
+    }
     return (
-        <div>
-            <button onClick={()=>i_am_promise(1)}>Click on mee</button>
+        <div className="main">
+            <div className="sq sq1">
+                <span></span>
+            </div>
+            <div className="sq">
+                <span></span>
+            </div>
+            <div className="sq">
+                <span></span>
+            </div>
+            <input type="text" value={val1} onChange={(e)=>getVal1(e.target.value)}></input>
+            <input type="text"  value={val2} onChange={(e)=>getVal2(e.target.value)}></input>
+            <button onClick={()=>findAdd(val1,val2)}>Find Greatest Common divisor</button>
         </div>
     )
 }
