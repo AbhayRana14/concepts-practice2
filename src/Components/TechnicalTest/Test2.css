@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+.sq{
+  width: 100px;
+  height: 100px;
+  border: thin dashed orange;
+  display: grid;
+  place-items: center;
+}
+.sq span{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: orangered;
+    border-radius: 50%;
+}
